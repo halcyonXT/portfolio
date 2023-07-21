@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;700;900&display=swap');
 
+
 html, body {
   background-color: var(--color-main);
   padding: 0;
@@ -20,7 +21,7 @@ html {
 
 .-marquee {
   height: 6vh;
-  width: 100%;
+  width: 150%;
   position: absolute;
   background-color: #101820;
   background: repeating-linear-gradient( -45deg, #d3bf0f, #d3bf0f 5.5px, #101820 5.5px, #101820 27.5px );
@@ -41,6 +42,7 @@ html {
   animation-iteration-count: infinite, 1;
   border-bottom: 5.5px solid var(--color-main);
   outline: 5.5px solid var(--color-complement);
+  left: -25%;
 }
 
 .-marquee-bottom {
@@ -53,6 +55,7 @@ html {
   animation-iteration-count: infinite, 1;
   border-top: 5.5px solid var(--color-main);
   outline: 5.5px solid var(--color-complement);
+  left: -25%;
 }
 
 
@@ -402,6 +405,7 @@ p {
 .-about-card {
   box-sizing: content-box;
   width: max-content;
+  max-width: 70%;
   min-height: max-content;
   padding: 1.5%;
   padding-right: 1%;
@@ -462,6 +466,18 @@ p {
 
 .-projects-card:nth-of-type(11) {
   animation: popout 0.5s ease-out 500ms 1 normal forwards
+}
+
+.-projects-card:nth-of-type(12) {
+  animation: popout 0.5s ease-out 550ms 1 normal forwards
+}
+
+.-projects-card:nth-of-type(13) {
+  animation: popout 0.5s ease-out 600ms 1 normal forwards
+}
+
+.-projects-card:nth-of-type(14) {
+  animation: popout 0.5s ease-out 650ms 1 normal forwards
 }
 /*animation: popout 0.5s ease-out 0s 1 normal forwards;*/
 
@@ -807,6 +823,7 @@ p {
   html {
     font-size: 1.5vh;
     overflow: hidden;
+    zoom: 100% !important;
   }
 
   body {
@@ -887,7 +904,7 @@ p {
   }
   
   .-project-content {
-    height: calc(100% - 6.5rem);
+    height: 70%;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -895,6 +912,116 @@ p {
     justify-content: space-between;
     opacity: 0;
     animation: contentpopout 0.35s ease-out 0s 1 normal forwards;
+  }
+
+  .-intro-info {
+    position: absolute;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 900;
+    height: 0;
+    width: 0;
+    padding: 0;
+    top: 90%;
+    left: 0;
+    background: linear-gradient(90deg, var(--color-main) 0%, var(--color-main) 50%, var(--color-complement) 50.1%);
+    background-size: 200%;
+    background-position: 0%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0;
+    animation-fill-mode: forwards;
+    color: transparent;
+    user-select: none;
+    display: none;
+  }
+
+  .-projects {
+    position: absolute;
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 100%;
+    max-height: 81%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1.2vh;
+    align-items: flex-end;
+    right: 2vw;
+    bottom: 7vh;
+  }
+
+  .-about {
+    overflow-y: auto;
+    overflow-x: visible;
+    width: 100%;
+    max-height: 81%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1.1vh;
+    margin-left: 0;
+    align-items: flex-end;
+    position: absolute;
+    right: 2vw;
+    bottom: 7vh;
+  }
+
+  .-project-content-wrapper {
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 100%;
+    min-height: 81%;
+    max-height: 81%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    position: absolute;
+    right: 2vw;
+    bottom: 7vh;
+  }
+
+  #links {
+    display: none;
+  }
+
+  #filler {
+    min-height: 10vh;
+    width: 100%;
+    opacity: 0;
+  }
+
+  .-main-controls > button {
+    background: none;
+    border: 0;
+    outline: 0;
+    color: var(--color-complement);
+    font-family: 'Playfair Display', serif;
+    width: max-content;
+    font-size: 1rem;
+    font-weight: 500;
+    background: linear-gradient(90deg, var(--color-complement) 49.8%, transparent 49.9%);
+    background-size: 200%;
+    background-position: 100%;
+    transition-duration: 0.3s;
+    user-select: none;
+  }
+  
+  .-main-controls > button:hover {
+    background-position: 100%;
+    color: var(--color-complement);
+  }
+  .-projects-card:hover, .-projects-pseudocard:hover {
+    cursor: pointer;
+    border-width: 5px;
+  }
+
+  * {
+    scrollbar-width: 0;
   }
 } /*760*/
 

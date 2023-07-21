@@ -72,6 +72,10 @@ let text = {
             description: "React chess app",
             about: "Archess is a chess application developed in React. With its sleek and intuitive interface, this app is tailored to meet the needs of both casual players and seasoned chess enthusiasts. It was designed to be simple and get you into the game quickly with no setbacks."
         },
+        mp3: {
+            description: "App for downloading YouTube files",
+            about: "MP3 Downloader is a simple application for downloading .mp3 files by simply copying the link. It has a 'bulk download' option that allows users to seamlessly download a large quantity of files."
+        },
         vexler: {
             description: "E-commerce app",
             about: "Vexler is a WIP e-commerce web application. It's meant to be an e-commerce app that provides a seamless shopping experience without all the overwhelming distractions of a regular online shop, while still being tailored to the user."
@@ -176,6 +180,10 @@ function LangContextProvider(props) {
                             description: "React chess app",
                             about: "Archess is a chess application developed in React. With its sleek and intuitive interface, this app is tailored to meet the needs of both casual players and seasoned chess enthusiasts. It was designed to be simple and get you into the game quickly with no setbacks."
                         },
+                        mp3: {
+                            description: "App for downloading YouTube files",
+                            about: "MP3 Downloader is a simple application for downloading .mp3 files by simply copying the link. It has a 'bulk download' option that allows users to seamlessly download a large quantity of files."
+                        },
                         vexler: {
                             description: "E-commerce app",
                             about: "Vexler is a WIP e-commerce web application. It's meant to be an e-commerce app that provides a seamless shopping experience without all the overwhelming distractions of a regular online shop, while still being tailored to the user."
@@ -273,6 +281,10 @@ function LangContextProvider(props) {
                         archess: {
                             description: "React aplikacija za šah",
                             about: "Archess je aplikacija za šah razvijena u React-u. Sa svojim elegantnim i intuitivnim interfejsom, ova aplikacija je prilagođena kako za casual igrače, tako i za iskusne zaljubljenike u šah. Dizajnirana je da bude jednostavna i da vas brzo uvede u igru bez ikakvih smetnji."
+                        },
+                        mp3: {
+                            description: "Aplikacija za preuzimanje YouTube fajlova",
+                            about: "MP3 downloader je jednostavna aplikacija za preuzimanje .mp3 fajlova samo kopiranjem linka. Ima 'bulk download' opciju koja omogućuje korisniku nesmetano preuzimanje velike količine fajlova."
                         },
                         vexler: {
                             description: "E-trgovinska aplikacija",

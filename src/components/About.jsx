@@ -1,8 +1,10 @@
 import React from "react"
 import { LangContext } from "../utilities/languageContext"
+import { PhoneContext } from "../utilities/phoneContext"
 
 export function About() {
     const {text} = React.useContext(LangContext)
+    const {isMobile} = React.useContext(PhoneContext)
 
     return (
         <div className="-about">
@@ -22,6 +24,11 @@ export function About() {
             <div className="-about-card -popout">{text.about.aspirationsList[2]}</div>
             <div className="-about-card -popout">{text.about.aspirationsList[3]}</div>
             <div className="-about-card -popout">{text.about.aspirationsList[4]}</div>
+            {
+                isMobile
+                &&
+                <div id="filler"></div>
+            }
         </div>
     )
 }

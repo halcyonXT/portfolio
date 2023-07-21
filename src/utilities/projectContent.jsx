@@ -13,7 +13,7 @@ export const fetchContent = (id, description, handleDeselect, timestamp) => {
         case "Typerate":
             content =   <ProjectContent 
                 images={["https://i.ibb.co/hsPPcgv/t1.png","https://i.ibb.co/Twm8mMz/t2.png","https://i.ibb.co/82JMj5S/t3.png","https://i.ibb.co/qDRXnjP/t4.png","https://i.ibb.co/vXwRF5N/t5.png","https://i.ibb.co/BtM9GjM/t6.png","https://i.ibb.co/xjvvSMv/t7.png"]}
-                technologies={['html', 'javascript', 'css', 'vite', 'react', 'node', 'express', 'mongodb', 'react-router', 'chartjs']}
+                technologies={['html', 'javascript', 'css', 'mongodb', 'react', 'node', 'express', 'mongodb', 'react-router', 'chartjs']}
                 about="typerate"
             />
             github=["https://github.com/halcyonXT/typerate", "https://github.com/halcyonXT/typerate-backend"]
@@ -27,6 +27,14 @@ export const fetchContent = (id, description, handleDeselect, timestamp) => {
             />
             page="https://halcyonxt.github.io/noteplace/"
             github="https://github.com/halcyonXT/noteplace"
+            break
+        case "MP3 downloader":
+            content =   <ProjectContent 
+                images={["https://i.ibb.co/vZX7Rvd/mp31.png","https://i.ibb.co/2KTvcNp/mp32.png"]}
+                technologies={['html', 'javascript', 'css', 'react', 'node', 'express']}
+                about="mp3"
+            />
+            github="https://github.com/halcyonXT/yt-to-mp3";
             break
         case "Archess":
             content =   <ProjectContent 
@@ -205,6 +213,7 @@ function ProjectContent(props) {
     }
 
     const zoom = () => {
+        if (isMobile) {return}
         setZoomed(prev => !prev)//flex
         let target = document.querySelector('.-project-content-image-wrapper')
         if (zoomed) {

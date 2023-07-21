@@ -56,10 +56,14 @@ function App() {
             fill: 'forwards',
             duration: 400
         })
-        if (route === "/") {
+        if (route === "/portfolio" || route === "/portfolio/") {
             setActivePanel('home')
         } else {
-            setActivePanel(route.slice(1))
+            route.charAt(route.length - 1) === '/'
+            ?
+            setActivePanel(route.slice(11, route.length - 1))
+            :
+            setActivePanel(route.slice(11))
         }
         timer = setTimeout(() => {
             navigate(route)
@@ -85,7 +89,7 @@ function App() {
     })
 
     const [activePanel, setActivePanel] = React.useState((() => {
-        if (location.pathname === "/") {
+        if (location.pathname === "/portfolio") {
             return "home"
         } else return location.pathname.slice(1)
     })())
@@ -150,7 +154,7 @@ function App() {
 
     const changeScheme = (type) => {
         localStorage.setItem('background', type)
-        if (type !== colorScheme) { return window.location.reload() }
+        if (type !== colorScheme && !isMobile) { return window.location.reload() }
         if (type === "dark") {
             setColorScheme('dark')
             document.documentElement.style.setProperty('--color-main', colors.dark);
@@ -214,19 +218,19 @@ function App() {
                             <div className='-main-controls'>
                                 <button 
                                     style={getStyles(activePanel === 'home')}
-                                    onClick={() => delayedRouteChange('/')}
+                                    onClick={() => delayedRouteChange('/portfolio')}
                                 >{text.menu.home}</button>
                                 <button 
                                     style={getStyles(activePanel === 'projects')}
-                                    onClick={() => delayedRouteChange('/projects')}
+                                    onClick={() => delayedRouteChange('/portfolio/projects')}
                                 >{text.menu.projects}</button>
                                 <button 
                                     style={getStyles(activePanel === 'about')}
-                                    onClick={() => delayedRouteChange('/about')}
+                                    onClick={() => delayedRouteChange('/portfolio/about')}
                                 >{text.menu.about}</button>
                                 <button 
                                     style={getStyles(activePanel === 'contact')}
-                                    onClick={() => delayedRouteChange('/contact')}
+                                    onClick={() => delayedRouteChange('/portfolio/contact')}
                                 >{text.menu.contact}</button>
                             </div>
                             <div>
@@ -248,12 +252,12 @@ function App() {
                 </div>
                 <div className='-main-right'>
                     <Routes>
-                        <Route exact path='/' element={
+                        <Route exact path='/portfolio' element={
                             <Home start={loading.animationFinished}/>
                         }/>
-                        <Route path='/projects' element= {<Projects />}/>
-                        <Route path='/about' element={<About />}/>
-                        <Route path='/contact' element={<Contact />}/>
+                        <Route path='/portfolio/projects' element= {<Projects />}/>
+                        <Route path='/portfolio/about' element={<About />}/>
+                        <Route path='/portfolio/contact' element={<Contact />}/>
                     </Routes>
                 </div>
             </div>
