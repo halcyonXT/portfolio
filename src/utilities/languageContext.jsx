@@ -36,7 +36,7 @@ let text = {
     },
     about: {
         aboutme: "About me",
-        me: ["My name is Aleksandar Milošević and I am a front-end developer based in Bor, Serbia, with a passion for all things creative.", 
+        me: ["My name is Aleksandar Milošević and I am a front-end developer based in Serbia, with a passion for all things creative.", 
         "With expertise in React, I thrive on crafting beautiful and intuitive user interfaces.", 
         "I am dedicated to creating engaging web experiences that seamlessly blend aesthetics and functionality.",
         "Constantly seeking new ways to innovate and grow, I am driven by my love for technology and the limitless possibilities it offers in the realm of design and development."
@@ -144,7 +144,7 @@ function LangContextProvider(props) {
                     theme: 'Theme',
                     about: {
                         aboutme: "About me",
-                        me: ["My name is Aleksandar Milošević and I am a front-end developer based in Bor, Serbia, with a passion for all things creative.", 
+                        me: ["My name is Aleksandar Milošević and I am a front-end developer based in Serbia, with a passion for all things creative.", 
                         "With expertise in React, I thrive on crafting beautiful and intuitive user interfaces.", 
                         "I am dedicated to creating engaging web experiences that seamlessly blend aesthetics and functionality.",
                         "Constantly seeking new ways to innovate and grow, I am driven by my love for technology and the limitless possibilities it offers in the realm of design and development."
